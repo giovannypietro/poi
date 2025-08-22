@@ -64,6 +64,8 @@ Start by examining the sample receipt:
 cat poi_receipt_example.json
 ```
 
+For detailed field explanations and validation rules, see [SCHEMA.md](SCHEMA.md).
+
 This file demonstrates our initial thinking on what a Proof-of-Intent receipt should contain. We want your feedback on:
 
 - **Missing fields** - What intent information are we not capturing?
