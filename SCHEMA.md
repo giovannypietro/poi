@@ -44,7 +44,7 @@ A PoI receipt is a JSON document that cryptographically proves an agent's intent
 
 #### `receipt_id` (required)
 - **Type**: `string`
-- **Format**: Hexadecimal string
+- **Format**:  string
 - **Example**: `"4449f17eca4ac359"`
 - **Description**: Unique identifier for this receipt instance
 - **Constraints**: 16+ characters, globally unique
@@ -125,7 +125,8 @@ Defines what the agent is allowed to do.
   "scope": "object",
   "ttl": "string",
   "audience": "string",
-  "issued_by": "string"
+  "issued_by": "string",
+  "icp_signature": "string"
 }
 ```
 
@@ -159,6 +160,19 @@ Defines what the agent is allowed to do.
 - **Format**: URI-like identifier
 - **Example**: `"icp://agentic/identity-control-plane"`
 - **Description**: Authority that granted the capability
+
+##### `capability.icp_signature` (required)
+- **Type**: `string`
+- **Format**: Base64-encoded signature
+- **Example**: `"MEUCIQCs6m9...=="`
+- **Description**: Digital signature from the Identity Control Plane authorizing the specific capabilities for this agent lineage
+- **Constraints**: Must be verifiable against ICP's public key, signature covers capability scope and agent lineage
+
+**Signature Coverage**: The ICP signature covers the concatenated hash of:
+- Capability scope (actions + resources)
+- Agent lineage chain
+- Capability TTL and audience
+- Receipt expiration time
 
 ### Risk Context
 
@@ -299,6 +313,12 @@ All fields marked as `(required)` must be present and non-null.
 - Changes to receipts invalidate cryptographic signatures
 - Audit logs should be immutable and tamper-evident
 
+### Signature Verification
+- **ICP Signature**: Must verify the Identity Control Plane's signature covers the exact capability scope and agent lineage
+- **Agent Lineage Binding**: The signature binds capabilities to the specific chain of agents, preventing capability transfer to unauthorized agents
+- **Scope Integrity**: Any modification to actions, resources, or agent lineage invalidates the ICP signature
+- **Temporal Binding**: Signature includes expiration time to prevent replay attacks
+
 ### Privacy
 - Sensitive information should be encrypted or redacted
 - Personal identifiers should be pseudonymized when possible
@@ -316,6 +336,21 @@ The schema is designed to be extensible:
 - New object types can be introduced
 - Version numbers allow for schema evolution
 - Unknown fields should be preserved during processing
+
+## Cryptographic Binding
+
+### Agent Lineage Binding
+The ICP signature creates a cryptographic binding between:
+1. **Capability Scope**: What actions and resources are permitted
+2. **Agent Chain**: The specific sequence of agents authorized to use these capabilities
+3. **Temporal Constraints**: When the capabilities are valid
+4. **Context**: Risk assessment and policy compliance
+
+This binding ensures that:
+- Capabilities cannot be transferred to unauthorized agents
+- Agent lineage changes invalidate the receipt
+- Scope modifications break the signature
+- Temporal constraints are cryptographically enforced
 
 ## Example Usage
 

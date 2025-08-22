@@ -1,0 +1,62 @@
+{
+  "type": "agentic.poi.receipt.v1",
+  "receipt_id": "4449f17eca4ac359",
+  "issued_at": "2025-08-22T20:39:52Z",
+  "expires_at": "2025-08-22T20:44:52Z",
+  "initiator": {
+    "human": {
+      "sub": "user:4345654345654345654",
+      "session_id": "sess-4f92a7"
+    },
+    "agent_lineage": [
+      {
+        "agent_id": "agent://sales-reporter@v1.3.2",
+        "spawn_reason": "scheduled_report"
+      },
+      {
+        "agent_id": "agent://exporter@s3-writer",
+        "spawn_reason": "delegated_step"
+      }
+    ]
+  },
+  "objective": {
+    "description": "Export Q2 revenue by product to S3",
+    "task_hash": "0ceab96dcb0711521e4776cd7e32c73073154027154955e14c4944069c6c5933"
+  },
+  "capability": {
+    "mode": "just-in-time",
+    "scope": {
+      "actions": [
+        "s3:PutObject"
+      ],
+      "resources": [
+        "arn:aws:s3:::finance-reports/q2-*.csv"
+      ]
+    },
+    "ttl": "5m",
+    "audience": "arn:aws:s3:::finance-reports",
+    "issued_by": "icp://agentic/identity-control-plane",
+    "icp_signature": "MEUCIQCs6m9...=="
+  },
+  "risk_context": {
+    "data_sensitivity": "confidential",
+    "env": "prod",
+    "anomaly_score": 0.12,
+    "policy_version": "pol-2025-08-01",
+    "signals": [
+      "mfa_present",
+      "device_trusted",
+      "ip_reputation:good"
+    ]
+  },
+  "attestations": {
+    "agent_pubkey_fingerprint": "ed25519:2f1c...ab7e",
+    "icp_signature": "MEUCIQCs6m9...==",
+    "witness_log_anchor": "chain://attestnet/blk-9823445#tx-17"
+  },
+  "audit": {
+    "nonce": "b7e5c930",
+    "merkle_root": "a9d4b80f...",
+    "log_stream": "arn:aws:logs:us-east-1:123456789012:log-group:agent-actions"
+  }
+}
