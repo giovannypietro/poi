@@ -1,8 +1,8 @@
-# 🔐 From Permissions to Proof-of-Intent: The Missing Layer in Agentic IAM
+# From Permissions to Proof-of-Intent: The Missing Layer in Agentic IAM
 
 > **The future of AI agent security isn't just about who can do what—it's about proving why they're doing it.**
 
-## 🚨 The Problem: Traditional IAM Falls Short for AI Agents
+## The Problem: Traditional IAM Falls Short for AI Agents
 
 In traditional IAM, access is binary: who can do what. But when AI agents act on our behalf, that's no longer enough.
 
@@ -13,23 +13,23 @@ Agents don't just execute—they:
 - **Act at machine speed**, often without direct human oversight
 
 That means we can't just ask:
-✅ "Does this agent have permission?"
+"Does this agent have permission?"
 
 We must also ask:
-❓ "Why is it doing this, right now, on whose behalf, and with what justification?"
+"Why is it doing this, right now, on whose behalf, and with what justification?"
 
-## 💡 The Solution: Proof-of-Intent (PoI)
+## A Possible Solution: Proof-of-Intent (PoI)
 
 That's where Proof-of-Intent (PoI) comes in.
 
 With PoI, every privileged agent action carries a cryptographic intent receipt:
 
-- **🔗 Initiator lineage**: who or what spawned the action (human, parent agent)
-- **🎯 Declared objective**: task hash or explicit purpose  
-- **⏳ Just-in-time capability**: scoped and time-boxed permissions
-- **⚖️ Risk context**: sensitivity of data, anomaly scores, policy checks
+- **Initiator lineage**: who or what spawned the action (human, parent agent)
+- **Declared objective**: task hash or explicit purpose  
+- **Just-in-time capability**: scoped and time-boxed permissions
+- **Risk context**: sensitivity of data, anomaly scores, policy checks
 
-## 🎯 Why This Matters
+## Why This Matters
 
 - **Auditors** get cryptographic receipts, not vague logs
 - **CISOs** get provable accountability at agent speed
@@ -38,12 +38,78 @@ With PoI, every privileged agent action carries a cryptographic intent receipt:
 Without Proof-of-Intent, AI agents are essentially ghost users.  
 With it, we move from **blind trust → provable trust**.
 
-## 🚀 Getting Started
+## Current Status: Starting Point
+
+This repository represents the beginning of the Proof-of-Intent journey. We're starting with a concrete example (see JSON) to demonstrate the concept and gather feedback from the community.
+
+### What We Have So Far
+
+- **`poi_receipt_example.json`** - A sample Proof-of-Intent receipt showing the structure and fields we envision
+- **Basic concept documentation** - This README explaining the vision and problem space
+
+### What's Next
+
+We're actively seeking input on:
+- **Receipt structure** - Does the JSON format capture all necessary intent information?
+- **Cryptographic approach** - What signing and verification methods make sense?
+- **Integration patterns** - How should PoI integrate with existing IAM systems?
+- **Use case priorities** - Which agent scenarios should we tackle first?
+
+## Explore the Concept
+
+Start by examining the sample receipt:
+
+```bash
+# View the current example
+cat poi_receipt_example.json
+```
+
+This file demonstrates our initial thinking on what a Proof-of-Intent receipt should contain. We want your feedback on:
+
+- **Missing fields** - What intent information are we not capturing?
+- **Field definitions** - Are our field names and descriptions clear?
+- **Data types** - Do the proposed data structures make sense?
+- **Extensibility** - How can we make this format future-proof?
+
+## We Need Your Feedback
+
+This is an open exploration, and we want to hear from:
+
+- **Security professionals** - Does this approach address real IAM gaps?
+- **AI/ML engineers** - How would you integrate this with your agent systems?
+- **DevOps teams** - What operational challenges do you foresee?
+- **Compliance experts** - Does this provide the audit trail you need?
+
+## How to Contribute Feedback
+
+### GitHub Discussions
+The best way to share your thoughts is through [GitHub Discussions](../../discussions):
+
+- **General feedback** - Start a new discussion about the overall concept
+- **Receipt structure** - Comment on specific fields or propose new ones
+- **Use cases** - Share scenarios where PoI would be valuable
+- **Technical questions** - Ask about implementation details or alternatives
+
+### Issues
+Found a specific problem or have a concrete suggestion? [Open an issue](../../issues):
+
+- **Bug reports** - If something in our examples doesn't work
+- **Feature requests** - For new capabilities or improvements
+- **Documentation** - If something isn't clear or is missing
+
+### Pull Requests
+Ready to contribute code or examples? We welcome:
+
+- **Improved examples** - Better receipt structures or use cases
+- **Documentation** - Clarifications, tutorials, or integration guides
+- **Prototype implementations** - Working code that demonstrates the concept
+
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- Basic understanding of cryptographic signatures and IAM concepts
+- Basic understanding of IAM and cryptographic concepts
+- Familiarity with JSON and API design
+- Interest in AI agent security
 
 ### Quick Start
 ```bash
@@ -51,19 +117,14 @@ With it, we move from **blind trust → provable trust**.
 git clone <your-repo-url>
 cd poi
 
-# Install dependencies
-npm install
+# Examine the example
+cat poi_receipt_example.json
 
-# Run the example
-npm run example
+# Start a discussion with your feedback
+# Visit: https://github.com/yourusername/poi/discussions
 ```
 
-### Explore the Concepts
-- Check out `poi_receipt_example.json` to see what a PoI receipt looks like
-- Review the core concepts in our documentation
-- Try building your first intent receipt
-
-## 🏗️ Architecture Overview
+## Architecture Vision
 
 PoI operates at three key layers:
 
@@ -71,78 +132,27 @@ PoI operates at three key layers:
 2. **Receipt Generation**: Cryptographic proof of intent is created and signed
 3. **Verification & Audit**: Receipts can be verified and audited in real-time
 
-## 🤝 How to Contribute
+## Development Status
 
-We're building the foundation for trustworthy AI agent interactions. Here's how you can help:
+- **Phase 1**: Concept exploration and community feedback ✅
+- **Phase 2**: Specification development and validation (planned)
+- **Phase 3**: Reference implementation and testing (planned)
+- **Phase 4**: Integration examples and production readiness (planned)
 
-### 🐛 Report Issues
-Found a bug or have a feature request? [Open an issue](../../issues) with:
-- Clear description of the problem
-- Steps to reproduce
-- Expected vs actual behavior
+## License
 
-### 💡 Propose Enhancements
-Have ideas for improving PoI? We'd love to hear them:
-- [Start a discussion](../../discussions) 
-- [Submit a feature request](../../issues/new?template=feature_request.md)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### 🔧 Submit Code
-Ready to contribute code? Here's our process:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### 📚 Improve Documentation
-Help others understand PoI better:
-- Fix typos or clarify explanations
-- Add examples for common use cases
-- Translate documentation to other languages
-
-## 🧪 Development
-
-### Running Tests
-```bash
-npm test
-```
-
-### Building
-```bash
-npm run build
-```
-
-### Code Style
-We use Prettier and ESLint. Run before committing:
-```bash
-npm run lint
-npm run format
-```
-
-## 📖 Documentation
-
-- [Core Concepts](./docs/concepts.md)
-- [API Reference](./docs/api.md)
-- [Integration Guide](./docs/integration.md)
-- [Security Model](./docs/security.md)
-
-## 🔒 Security
-
-This project addresses critical security challenges in AI agent interactions. If you discover a security vulnerability, please:
-
-1. **Do not** open a public issue
-2. **Email** security@yourdomain.com with details
-3. **Wait** for our security team to respond
-
-## 📄 License
-
-[License details to be added]
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Thanks to all contributors who are helping build a more trustworthy AI future.
 
 ---
 
-**Ready to move from blind trust to provable trust?** [Get started](#getting-started) or [join the discussion](../../discussions)!
+**Ready to help shape the future of AI agent security?** 
+
+1. **Examine** the sample receipt
+2. **Share** your feedback via [GitHub Discussions](../../discussions)
+3. **Join** the conversation about building provable trust
+
+This is just the beginning—your input will shape where we go next!
