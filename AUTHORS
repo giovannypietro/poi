@@ -1,0 +1,30 @@
+# Authors
+
+This file lists the contributors to the Proof-of-Intent (PoI) project.
+
+## Original Concept & Initial Implementation
+
+- **Giovanny Pietro** - giovanny.pietro@gmail.com
+  - Initial concept development
+  - Repository setup and documentation
+  - Sample receipt structure design
+
+## Contributors
+
+*This section will be populated as contributors join the project.*
+
+## How to Add Your Name
+
+If you've contributed to this project, please add your name to this file by:
+
+1. Forking the repository
+2. Adding your name and contribution details
+3. Submitting a pull request
+
+## Contribution Types
+
+- **Code**: Implementation, bug fixes, features
+- **Documentation**: README updates, tutorials, examples
+- **Design**: UI/UX improvements, architecture suggestions
+- **Testing**: Test cases, validation, quality assurance
+- **Community**: Discussions, feedback, use case examples
