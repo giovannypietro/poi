@@ -10,6 +10,25 @@ A PoI receipt is a JSON document that cryptographically proves an agent's intent
 - Risk context and policy compliance
 - Cryptographic attestations for verification
 
+## Table of Contents
+
+- [Schema Version](#schema-version)
+- [Root Object Structure](#root-object-structure)
+- [Field Definitions](#field-definitions)
+  - [Core Metadata](#core-metadata)
+  - [Initiator Information](#initiator-information)
+  - [Objective Declaration](#objective-declaration)
+  - [Capability Grant](#capability-grant)
+  - [Risk Context](#risk-context)
+  - [Cryptographic Attestations](#cryptographic-attestations)
+  - [Audit Trail](#audit-trail)
+- [Validation Rules](#validation-rules)
+- [Security Considerations](#security-considerations)
+- [Cryptographic Binding](#cryptographic-binding)
+- [Extensibility](#extensibility)
+- [Example Usage](#example-usage)
+- [Schema Evolution](#schema-evolution)
+
 ## Schema Version
 
 **Current Version**: `agentic.poi.receipt.v1`
@@ -356,6 +375,32 @@ This binding ensures that:
 
 See `poi_receipt_example.json` for a complete example of a valid receipt.
 
+## Quick Reference
+
+### Common Receipt Types
+
+| Use Case | Capability Mode | Typical TTL | Risk Level |
+|----------|----------------|-------------|------------|
+| Data Export | `just-in-time` | 5-15 minutes | Low-Medium |
+| Emergency Access | `emergency` | 1-2 hours | High |
+| Scheduled Tasks | `delegated` | 1-24 hours | Medium |
+| Interactive Sessions | `just-in-time` | 30-60 minutes | Low |
+
+### Required Fields Checklist
+
+- [ ] `type` - Schema version
+- [ ] `receipt_id` - Unique identifier
+- [ ] `issued_at` - Issue timestamp
+- [ ] `expires_at` - Expiration timestamp
+- [ ] `initiator.agent_lineage` - Agent chain
+- [ ] `objective.description` - Task description
+- [ ] `objective.task_hash` - Task hash
+- [ ] `capability.scope` - Actions and resources
+- [ ] `capability.icp_signature` - ICP authorization
+- [ ] `risk_context` - Risk assessment
+- [ ] `attestations` - Cryptographic proof
+- [ ] `audit` - Audit trail
+
 ## Schema Evolution
 
 When making changes to the schema:
@@ -363,3 +408,23 @@ When making changes to the schema:
 2. Maintain backward compatibility where possible
 3. Document breaking changes clearly
 4. Provide migration tools for existing receipts
+
+## Implementation Considerations
+
+### Cryptographic Requirements
+- **Key Management**: Secure storage and rotation of ICP signing keys
+- **Signature Algorithms**: Support for Ed25519, RSA-PSS, or ECDSA
+- **Hash Functions**: SHA-256 for task hashing and Merkle trees
+- **Key Distribution**: Secure distribution of ICP public keys to verifiers
+
+### Performance Considerations
+- **Signature Verification**: Optimize for high-throughput verification
+- **Receipt Size**: Balance between completeness and network overhead
+- **Caching**: Cache verified receipts to reduce repeated verification
+- **Batch Processing**: Support for bulk receipt validation
+
+### Integration Points
+- **IAM Systems**: Integrate with existing identity providers
+- **Monitoring**: Real-time receipt validation and alerting
+- **Compliance**: Automated policy checking and reporting
+- **Incident Response**: Quick receipt invalidation and investigation

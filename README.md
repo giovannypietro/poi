@@ -26,8 +26,9 @@ With PoI, every privileged agent action carries a cryptographic intent receipt:
 
 - **Initiator lineage**: who or what spawned the action (human, parent agent)
 - **Declared objective**: task hash or explicit purpose  
-- **Just-in-time capability**: scoped and time-boxed permissions
+- **Just-in-time capability**: scoped and time-boxed permissions with ICP signatures
 - **Risk context**: sensitivity of data, anomaly scores, policy checks
+- **Cryptographic attestations**: tamper-evident proof of authorization and agent lineage
 
 ## Why This Matters
 
@@ -45,6 +46,7 @@ This repository represents the beginning of the Proof-of-Intent journey. We're s
 ### What We Have So Far
 
 - **`poi_receipt_example.json`** - A sample Proof-of-Intent receipt showing the structure and fields we envision
+- **`SCHEMA.md`** - Comprehensive schema documentation with field definitions and validation rules
 - **Basic concept documentation** - This README explaining the vision and problem space
 
 ### What's Next
@@ -52,6 +54,7 @@ This repository represents the beginning of the Proof-of-Intent journey. We're s
 We're actively seeking input on:
 - **Receipt structure** - Does the JSON format capture all necessary intent information?
 - **Cryptographic approach** - What signing and verification methods make sense?
+- **ICP signature coverage** - Does our agent lineage binding approach provide sufficient security?
 - **Integration patterns** - How should PoI integrate with existing IAM systems?
 - **Use case priorities** - Which agent scenarios should we tackle first?
 
@@ -71,6 +74,7 @@ This file demonstrates our initial thinking on what a Proof-of-Intent receipt sh
 - **Missing fields** - What intent information are we not capturing?
 - **Field definitions** - Are our field names and descriptions clear?
 - **Data types** - Do the proposed data structures make sense?
+- **Security model** - Does our ICP signature and agent lineage binding provide adequate protection?
 - **Extensibility** - How can we make this format future-proof?
 
 ## We Need Your Feedback
@@ -133,6 +137,20 @@ PoI operates at three key layers:
 1. **Intent Declaration**: Agents declare their purpose before taking action
 2. **Receipt Generation**: Cryptographic proof of intent is created and signed
 3. **Verification & Audit**: Receipts can be verified and audited in real-time
+
+## Security Features
+
+### Cryptographic Binding
+- **ICP Signatures**: Identity Control Plane cryptographically signs capability grants
+- **Agent Lineage Binding**: Signatures bind capabilities to specific agent chains
+- **Tamper Detection**: Any modification invalidates cryptographic signatures
+- **Temporal Security**: Expiration times prevent replay attacks
+
+### Audit & Compliance
+- **Immutable Receipts**: Cryptographic proof of what was authorized
+- **Agent Accountability**: Clear chain of responsibility for actions
+- **Policy Enforcement**: Risk context and compliance signals
+- **Verifiable Authorization**: Cryptographic proof of capability grants
 
 ## Development Status
 
