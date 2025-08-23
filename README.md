@@ -1,4 +1,4 @@
-# From Permissions to Proof-of-Intent: The Missing Layer in Agentic IAM
+# From Permissions to Proof-of-Intent: One of the Missing Layers in Agentic IAM
 
 > **The future of AI agent security isn't just about who can do what—it's about proving why they're doing it.**
 
@@ -37,9 +37,9 @@ With PoI, every privileged agent action carries a cryptographic intent receipt:
 - **Developers** get a safer way to let agents act autonomously without fear of "black box" abuse
 
 Without Proof-of-Intent, AI agents are essentially ghost users.  
-With it, we move from **blind trust → provable trust**.
+With it, we move from **blind trust to provable trust**.
 
-## Current Status: Starting Point
+## Current Status of the project: Starting Point
 
 This repository represents the beginning of the Proof-of-Intent journey. We're starting with a concrete example (see JSON) to demonstrate the concept and gather feedback from the community.
 
@@ -155,7 +155,7 @@ PoI operates at three key layers:
 ## Development Status
 
 - **Phase 1**: Concept exploration and community feedback ✅
-- **Phase 2**: Specification development and validation (planned)
+- **Phase 2**: Specification development and validation (Planned)
 - **Phase 3**: Reference implementation and testing (planned)
 - **Phase 4**: Integration examples and production readiness (planned)
 
