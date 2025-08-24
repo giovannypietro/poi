@@ -15,6 +15,7 @@ Thank you for your interest in contributing to the Proof-of-Intent project! This
 - [Submitting Changes](#submitting-changes)
 - [Community](#community)
 - [Questions or Need Help?](#questions-or-need-help)
+- [Thank You!](#thank-you)
 
 ## Code of Conduct
 
@@ -85,8 +86,8 @@ Our goal is to create:
 
 ### First Contribution
 - Start with something small like documentation improvements
-- Check the [Issues](../../issues) page for "good first issue" labels
-- Join [GitHub Discussions](../../discussions) to get familiar with the community
+- Check the Issues page for "good first issue" labels
+- Join GitHub Discussions to get familiar with the community
 
 ## Development Workflow
 
@@ -238,7 +239,7 @@ Brief description of what this PR accomplishes
 - **Email**: For security-sensitive issues
 
 ### Getting Help
-- Check existing [Issues](../../issues) and [Discussions](../../discussions)
+- Check existing Issues and Discussions
 - Search the documentation for answers
 - Ask questions in GitHub Discussions
 - Be specific about what you're trying to accomplish
@@ -250,8 +251,8 @@ Brief description of what this PR accomplishes
 
 ## Questions or Need Help?
 
-- **GitHub Discussions**: [Start a discussion](../../discussions/new)
-- **Issues**: [Report a problem](../../issues/new)
+- **GitHub Discussions**: Start a discussion
+- **Issues**: Report a problem
 - **Security**: Email for sensitive security issues
 - **General**: Join the community conversation
 
@@ -261,4 +262,4 @@ Your contributions help make Proof-of-Intent a reality. Whether you're fixing bu
 
 ---
 
-**Ready to contribute?** Start by [forking the repository](../../fork) or joining a [discussion](../../discussions)!
+**Ready to contribute?** Start by forking the repository or joining a discussion!

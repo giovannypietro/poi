@@ -12,6 +12,7 @@ A PoI receipt is a JSON document that cryptographically proves an agent's intent
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [Schema Version](#schema-version)
 - [Root Object Structure](#root-object-structure)
 - [Field Definitions](#field-definitions)
@@ -27,7 +28,9 @@ A PoI receipt is a JSON document that cryptographically proves an agent's intent
 - [Cryptographic Binding](#cryptographic-binding)
 - [Extensibility](#extensibility)
 - [Example Usage](#example-usage)
+- [Quick Reference](#quick-reference)
 - [Schema Evolution](#schema-evolution)
+- [Implementation Considerations](#implementation-considerations)
 
 ## Schema Version
 

@@ -89,7 +89,7 @@ This is an open exploration, and we want to hear from:
 ## How to Contribute Feedback
 
 ### GitHub Discussions
-The best way to share your thoughts is through [GitHub Discussions](../../discussions):
+The best way to share your thoughts is through GitHub Discussions:
 
 - **General feedback** - Start a new discussion about the overall concept
 - **Receipt structure** - Comment on specific fields or propose new ones
@@ -107,7 +107,7 @@ For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). Th
 We're committed to a welcoming and inclusive community. Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
 
 ### Issues
-Found a specific problem or have a concrete suggestion? [Open an issue](../../issues):
+Found a specific problem or have a concrete suggestion? Open an issue:
 
 - **Bug reports** - If something in our examples doesn't work
 - **Feature requests** - For new capabilities or improvements
@@ -127,17 +127,19 @@ Ready to contribute code or examples? We welcome:
 - Familiarity with JSON and API design
 - Interest in AI agent security
 
+> **Note**: This repository is currently in local development. The GitHub links will become active once the repository is pushed to GitHub.
+
 ### Quick Start
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/giovannypietro/poi.git
 cd poi
 
 # Examine the example
 cat poi_receipt_example.json
 
 # Start a discussion with your feedback
-# Visit: https://github.com/yourusername/poi/discussions
+# Visit: https://github.com/giovannypietro/poi/discussions
 ```
 
 ## Architecture Vision
@@ -182,7 +184,7 @@ Thanks to all contributors who are helping build a more trustworthy AI future. S
 **Ready to help shape the future of AI agent security?** 
 
 1. **Examine** the sample receipt
-2. **Share** your feedback via [GitHub Discussions](../../discussions)
+2. **Share** your feedback via GitHub Discussions
 3. **Join** the conversation about building provable trust
 
 This is just the beginning—your input will shape where we go next!
