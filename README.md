@@ -127,7 +127,7 @@ Ready to contribute code or examples? We welcome:
 - Familiarity with JSON and API design
 - Interest in AI agent security
 
-> **Note**: This repository is currently in local development. The GitHub links will become active once the repository is pushed to GitHub.
+
 
 ### Quick Start
 ```bash
