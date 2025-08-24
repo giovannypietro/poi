@@ -96,6 +96,13 @@ The best way to share your thoughts is through [GitHub Discussions](../../discus
 - **Use cases** - Share scenarios where PoI would be valuable
 - **Technical questions** - Ask about implementation details or alternatives
 
+### Contributing Guide
+For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). This includes:
+- Code contribution workflow
+- Documentation standards
+- Testing requirements
+- Community guidelines
+
 ### Issues
 Found a specific problem or have a concrete suggestion? [Open an issue](../../issues):
 
