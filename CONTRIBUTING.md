@@ -18,13 +18,15 @@ Thank you for your interest in contributing to the Proof-of-Intent project! This
 
 ## Code of Conduct
 
-This project is committed to providing a welcoming and inclusive environment for all contributors. By participating, you agree to:
+This project is committed to providing a welcoming and inclusive environment for all contributors. By participating, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-- Be respectful and considerate of others
-- Focus on what is best for the community
-- Show empathy towards other community members
-- Accept constructive feedback gracefully
-- Help others learn and grow
+The Code of Conduct ensures that:
+- All participants feel safe and welcome
+- Disagreements are handled respectfully
+- Harassment and inappropriate behavior are not tolerated
+- Community standards are clearly defined and enforced
+
+Please read the full [Code of Conduct](CODE_OF_CONDUCT.md) for complete details on our community standards and enforcement procedures.
 
 ## What We're Building
 

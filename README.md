@@ -103,6 +103,9 @@ For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). Th
 - Testing requirements
 - Community guidelines
 
+### Community Standards
+We're committed to a welcoming and inclusive community. Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
+
 ### Issues
 Found a specific problem or have a concrete suggestion? [Open an issue](../../issues):
 
